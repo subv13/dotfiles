@@ -1,0 +1,176 @@
+[colors]
+background = #2b2b2b
+foreground = #c5c8c6
+
+gray = #3a3a3a
+purple = #9f78e1
+green = #519f50
+gold = #ffb52a
+black = #282a2e
+cyan = #8abeb7
+red = #a54242
+white = #c5c8c6
+blue = #5f819d
+
+[bar/main]
+width = 100%
+height = 27
+
+fixed-center = true
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Input Mono:style=Regular:pixelsize=11;1"
+font-1 = "Material Design Icons:style=Bold:pixelsize=14;1"
+
+modules-left = i3
+modules-center = date
+modules-right = volume light layout wlan battery
+
+; ################### Layout ###################
+[module/layout]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format = <label-layout>
+format-foreground = ${colors.red}
+
+label-layout = " %layout%"
+
+; ################### Light ###################
+[module/light]
+type = internal/backlight
+card = intel_backlight
+
+format = <ramp> <label>
+format-foreground = ${colors.blue}
+
+label = %percentage:3%%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+
+; ################### Wlan ###################
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-foreground = ${colors.purple}
+
+format-disconnected = ""
+format-disconnected-foreground = ${colors.purple}
+
+label-connected = %essid:3%
+
+ramp-signal-0 = 冷
+ramp-signal-1 = 爛
+ramp-signal-2 = 嵐
+ramp-signal-3 = 襤
+ramp-signal-4 = 蠟
+
+; ################### Date ###################
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%m-%d-%Y"
+time = "%H:%M"
+
+label = " %date%   %time%"
+label-foreground = ${colors.foreground}
+label-background = ${colors.gray}
+label-padding = 2
+
+; ################### Volume ###################
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = ${colors.green}
+
+label-volume = "%percentage:3%%"
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+label-muted = " %percentage:3%%"
+label-muted-foreground = ${colors.green}
+
+; ################### Battery ###################
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 98
+
+format-charging = <ramp-capacity> <label-charging>
+label-charging-foreground = ${colors.gold}
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.gold}
+
+format-full = <ramp-capacity> <label-full>
+format-full-foreground = ${colors.gold}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+; ################### i3 ###################
+[module/i3]
+type = internal/i3
+strip-wsnumbers = false
+index-sort = true
+enable-scroll = false
+
+format = <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.blue}
+
+label-focused = %name%
+label-focused-background = ${colors.cyan}
+label-focused-foreground = ${colors.black}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+label-urgent = %name%!
+label-urgent-padding = 2
+label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.white}
+
+label-visible = %name%
+label-visible-foreground = #55
+label-visible-padding = 2
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
