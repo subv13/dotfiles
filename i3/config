@@ -41,7 +41,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+space exec rofi -show run
+bindsym Control+space exec rofi -show run
+
+bindsym $mod+Control+l exec ~/scripts/lock.sh
 
 # change focus
 bindsym $mod+j focus left

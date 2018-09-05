@@ -1,6 +1,7 @@
 export PATH=$PATH:~/pycharm/bin
 export PATH=$PATH:~/.npm-global/bin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/mnt/workspace/go
 export PATH=$GOPATH/bin:$PATH

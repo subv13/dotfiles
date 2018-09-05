@@ -8,4 +8,5 @@ cp ~/.config/polybar/* polybar/
 cp ~/.config/libinput-gestures.conf libinput/
 cp ~/.xsessionrc xsession/
 cp ~/.zshrc zsh/
+cp ~/scripts/* scripts/
 cp /usr/share/X11/xorg.conf.d/40-libinput.conf libinput/
