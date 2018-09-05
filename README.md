@@ -1,6 +1,7 @@
 # Dotfiles and fonts
 
 * i3-gaps
+* i3lock
 * polybar
 * rofi
 * xsession
