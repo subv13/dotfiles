@@ -12,6 +12,9 @@ alias anp="ansible-playbook"
 alias anv="ansible-vault"
 alias zshconfig="vim ~/.zshrc"
 
+alias ds4="sudo ds4drv --hidraw"
+alias nmrestart="sudo service network-manager restart"
+
 export PATH="/home/subv/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
