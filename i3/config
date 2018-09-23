@@ -116,6 +116,7 @@ assign [class="Firefox"] 1
 assign [class="Code"] 3
 assign [class="pycharm"] 4
 assign [class="Telegram"] 6
+assign [class="Steam"] 7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
